@@ -60,10 +60,10 @@ export default function PartnersPage() {
       {/* Hero Section */}
       <section className="bg-cover bg-center bg-no-repeat relative flex items-center" style={{backgroundImage: 'url(/partner.jpg)', height: '67vh'}}>
         <div className="absolute inset-0 bg-black/60"></div>
-        <div className="container mx-auto px-4 sm:px-6 text-center max-w-6xl relative z-10">
-          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl border border-gray-200">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight">Our Strategic Partners</h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 font-semibold leading-relaxed">Collaborating with industry leaders to deliver world-class networking and technology solutions</p>
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
+          <div className="text-center text-white">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Our Strategic Partners</h1>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">Collaborating with industry leaders to deliver world-class networking and technology solutions</p>
           </div>
         </div>
       </section>

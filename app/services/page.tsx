@@ -7,12 +7,12 @@ export default function ServicesPage() {
       <PageLoader />
 
       {/* Hero Section */}
-      <section className="bg-cover bg-center bg-no-repeat relative flex items-center" style={{backgroundImage: 'url(/services.png)', height: '67vh'}}>
+      <section className="bg-cover bg-center bg-no-repeat relative flex items-center" style={{backgroundImage: 'url(/services.jpg)', height: '67vh'}}>
         <div className="absolute inset-0 bg-black/60"></div>
-        <div className="container mx-auto px-4 sm:px-6 text-center max-w-6xl relative z-10">
-          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl border border-gray-200">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight">Tailor-Made Services Unique & Creative</h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 font-semibold leading-relaxed">Every network is designed, deployed and maintained differently, so we invest lots of time in understanding your fundamental requirements and build services collectively.</p>
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
+          <div className="text-center text-white">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Tailor-Made Services Unique & Creative</h1>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">Every network is designed, deployed and maintained differently, so we invest lots of time in understanding your fundamental requirements and build services collectively.</p>
           </div>
         </div>
       </section>
@@ -21,14 +21,14 @@ export default function ServicesPage() {
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Why Saitech for Your Network Services</h2>
-            <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">With deep expertise in IT and telecom infrastructure, Saitech delivers comprehensive solutions that optimize your network performance while reducing operational costs.</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">Why Saitech for Your Network Services</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">With deep expertise in IT and telecom infrastructure, Saitech delivers comprehensive solutions that optimize your network performance while reducing operational costs.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">🎯</div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Industry Expertise</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Over a decade of experience working with global telecom operators and enterprises, understanding complex network challenges.</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 text-gray-900">Industry Expertise</h3>
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">Over a decade of experience working with global telecom operators and enterprises, understanding complex network challenges.</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">💼</div>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
       {/* Our Approach */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">Our Approach</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">Our Approach</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
             <div className="text-center group cursor-pointer max-w-xs">
               <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-2xl" style={{backgroundColor: 'rgba(0, 212, 255, 0.2)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.4)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.2)'}>
@@ -108,10 +108,10 @@ export default function ServicesPage() {
       {/* Legacy Network */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-gray-900">Legacy Network</h2>
-          <h3 className="text-xl sm:text-2xl mb-6 sm:mb-8 text-gray-700 leading-relaxed">Enhance the life of your legacy network and build a sustainable spares management.</h3>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-gray-900">Legacy Network</h2>
+          <h3 className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-700 leading-relaxed">Enhance the life of your legacy network and build a sustainable spares management.</h3>
           <div className="space-y-4 sm:space-y-6 text-gray-600 leading-relaxed">
-            <p className="text-sm sm:text-base">Networks are built over a period of time, it take lot of effort in planning, budgeting, sourcing and later deployment, testing and finally provisioning traffic. Getting rid of old technology and removing your network in exchange of new equipment and technology is sometimes not cost effective in the short run.</p>
+            <p className="text-xs sm:text-sm md:text-base">Networks are built over a period of time, it take lot of effort in planning, budgeting, sourcing and later deployment, testing and finally provisioning traffic. Getting rid of old technology and removing your network in exchange of new equipment and technology is sometimes not cost effective in the short run.</p>
             <p className="text-sm sm:text-base">Sourcing hardware and support is the biggest challenge in maintaining legacy network. Often manufacturers are reluctant to support and provide hardware for legacy networks.</p>
             <p className="text-sm sm:text-base">Whether you support your legacy network in house or outsource, Saitech Studio is here to help keep your end of life equipment up and running.</p>
           </div>

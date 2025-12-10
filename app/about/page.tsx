@@ -8,10 +8,10 @@ export default function AboutPage() {
       {/* Who We Are Section */}
       <section className="py-20 sm:py-32 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/whoweare.jpg)'}}>
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="container mx-auto px-4 sm:px-6 text-center max-w-5xl relative z-10">
-          <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-12">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold mb-6 sm:mb-8 text-white">Who we are</h1>
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
+          <div className="text-center text-white">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Who We Are</h1>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
               We are an experienced and highly professional team who loves to design complex networks and solve critical cloud deployment challenges. We are a specialist provider of end-to-end cloud connectivity, storage, compute and capacity management.
             </p>
           </div>
