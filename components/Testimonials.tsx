@@ -1,47 +1,11 @@
 'use client';
 import { useState } from 'react';
+import { getTestimonials } from '@/lib/content';
 
 export default function Testimonials() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const testimonials = [
-    {
-      name: "David Chen",
-      company: "Singapore Tech Corp",
-      text: "Saitech transformed our network infrastructure. Their expertise in enterprise solutions is unmatched in Singapore.",
-      rating: 5
-    },
-    {
-      name: "Sarah Lim",
-      company: "Global Finance Ltd",
-      text: "Outstanding support and reliable network solutions. Saitech's team delivered exactly what we needed on time.",
-      rating: 5
-    },
-    {
-      name: "Michael Wong",
-      company: "Manufacturing Plus",
-      text: "Professional service from consultation to implementation. Our network performance improved significantly.",
-      rating: 5
-    },
-    {
-      name: "Jennifer Tan",
-      company: "Healthcare Systems Pte Ltd",
-      text: "Exceptional network security implementation. Saitech's solutions protected our sensitive patient data perfectly.",
-      rating: 5
-    },
-    {
-      name: "Robert Kumar",
-      company: "Logistics Hub Singapore",
-      text: "Seamless network upgrade with zero downtime. Their planning and execution were flawless.",
-      rating: 5
-    },
-    {
-      name: "Lisa Zhang",
-      company: "Education Institute",
-      text: "Reliable campus-wide network deployment. Students and staff now enjoy fast, stable connectivity.",
-      rating: 5
-    }
-  ];
+  const testimonials = getTestimonials();
   
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));

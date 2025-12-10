@@ -1,0 +1,350 @@
+{
+  "site": {
+    "name": "Saitech Studio",
+    "tagline": "Network Transformation Services",
+    "description": "We deliver customer success every day"
+  },
+  "hero": {
+    "texts": [
+      " source and supply networks ",
+      " design and deploy networks ",
+      " manage and maintain networks"
+    ],
+    "title": "We deliver customer success every day",
+    "subtitle": "We",
+    "description": "We passionately adopt new technology to build sustainable networks whilst reducing fixed network cost and increasing profitability."
+  },
+  "pages": {
+    "services": {
+      "hero": {
+        "title": "Tailor-Made Services Unique & Creative",
+        "description": "Every network is designed, deployed and maintained differently, so we invest lots of time in understanding your fundamental requirements and build services collectively.",
+        "backgroundImage": "/services.jpg"
+      },
+      "whySaitech": {
+        "title": "Why Saitech for Your Network Services",
+        "description": "With deep expertise in IT and telecom infrastructure, Saitech delivers comprehensive solutions that optimize your network performance while reducing operational costs.",
+        "features": [
+          {
+            "title": "Industry Expertise",
+            "description": "Over a decade of experience working with global telecom operators and enterprises, understanding complex network challenges.",
+            "icon": "🎯"
+          },
+          {
+            "title": "Vendor Partnerships",
+            "description": "Strategic relationships with Cisco, Juniper, HPE, and other leading vendors ensure access to best-in-class solutions.",
+            "icon": "💼"
+          },
+          {
+            "title": "End-to-End Support",
+            "description": "From initial design and procurement to deployment, maintenance, and lifecycle management - we handle it all.",
+            "icon": "🔧"
+          },
+          {
+            "title": "Cost Optimization",
+            "description": "Proven track record of reducing network costs by 30-40% through smart sourcing and lifecycle management strategies.",
+            "icon": "💰"
+          },
+          {
+            "title": "Global Reach",
+            "description": "International presence with ability to source, deploy, and support network infrastructure across multiple continents.",
+            "icon": "🌍"
+          },
+          {
+            "title": "Rapid Deployment",
+            "description": "Fast-track procurement and deployment processes to meet urgent business requirements and tight deadlines.",
+            "icon": "⚡"
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "steps": [
+          {
+            "title": "Learning",
+            "description": "We are curious to learn how our customers are expanding, operating & maintaining their networks.",
+            "icon": "📚"
+          },
+          {
+            "title": "Analysing",
+            "description": "Detailed analysis help us to understand and highlight the opportunities.",
+            "icon": "📊"
+          },
+          {
+            "title": "Proposing",
+            "description": "Combining best practices and latest trends we propose solutions based upon our learning and analysis.",
+            "icon": "💡"
+          },
+          {
+            "title": "Implementing",
+            "description": "A consultative approach to constantly seek feedback and implement solutions.",
+            "icon": "✅"
+          }
+        ]
+      }
+    },
+    "partners": {
+      "hero": {
+        "title": "Our Strategic Partners",
+        "description": "Collaborating with industry leaders to deliver world-class networking and technology solutions",
+        "backgroundImage": "/partner.jpg"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "Who We Are",
+        "description": "We are an experienced and highly professional team who loves to design complex networks and solve critical cloud deployment challenges. We are a specialist provider of end-to-end cloud connectivity, storage, compute and capacity management.",
+        "backgroundImage": "/whoweare.jpg"
+      },
+      "company": {
+        "title": "About Saitech",
+        "paragraphs": [
+          "Saitech is a leading provider of IT and telecom infrastructure solutions, specializing in network design, deployment, and management services. With years of industry experience, we have established ourselves as a trusted partner for enterprises and telecom operators worldwide.",
+          "Our expertise spans across multiple domains including cloud connectivity, data center solutions, network security, and infrastructure optimization. We work with industry-leading vendors and maintain strategic partnerships to deliver cutting-edge solutions that drive business growth.",
+          "At Saitech, we believe in building long-term relationships with our clients by understanding their unique challenges and delivering customized solutions that exceed expectations. Our team of certified professionals brings deep technical knowledge and practical experience to every project."
+        ],
+        "values": [
+          {
+            "title": "Our Mission",
+            "description": "To empower businesses with innovative network solutions that enhance operational efficiency, reduce costs, and enable digital transformation through sustainable and scalable infrastructure.",
+            "color": "cyan"
+          },
+          {
+            "title": "Our Vision",
+            "description": "To be the most trusted and preferred partner for enterprises seeking world-class network infrastructure solutions, recognized for our technical excellence, innovation, and commitment to customer success.",
+            "color": "blue"
+          },
+          {
+            "title": "Our Values",
+            "description": "Integrity, innovation, excellence, and customer-centricity form the foundation of everything we do. We are committed to delivering value through ethical practices and continuous improvement.",
+            "color": "indigo"
+          }
+        ]
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "We help telecom companies to bring sustainability in every aspect of business such as managing resources, deploying technology, managing assets and network expansions to meet future growth.",
+        "features": [
+          {
+            "title": "Network Utilisation",
+            "description": "Understanding your network unitization and making sure that your entire network has uniform and well-distributed traffic help you to reduce the need of unplanned upgrades",
+            "icon": "🌐"
+          },
+          {
+            "title": "Optimisation",
+            "description": "Optimum use of bandwidth, infrastructure, hardware around your network is key to achieve sustainable growth",
+            "icon": "⚡"
+          },
+          {
+            "title": "Network Hardware",
+            "description": "Encouraging the use of pre-owned hardware where possible is another step towards sustainability. Reduce the unnecessary manufacturing of old technology and promote new green manufacturing initiatives",
+            "icon": "🔧"
+          },
+          {
+            "title": "Green IT",
+            "description": "Practicing recycling for all your disposable or zero residual assets helps in recovering some of scarce resources like copper, silver, aluminium and gold.",
+            "icon": "♻️"
+          }
+        ]
+      },
+      "objectives": {
+        "title": "Corporate Objectives",
+        "description": "We work in a dynamic environment, our customers innovate and compete to achieve their goals. We pride ourself in maintaining trust, integrity and ethics.",
+        "items": [
+          {
+            "title": "Loyalty",
+            "description": "To earn loyalty and trust from our customers by providing the highest level of quality and value.",
+            "icon": "🤝"
+          },
+          {
+            "title": "Transparency",
+            "description": "To be direct, open and transparent in all our dealings without any compromise on integrity.",
+            "icon": "🔍"
+          },
+          {
+            "title": "Agility",
+            "description": "To be agile, adaptable and resourceful to deliver faster on a consistent basis.",
+            "icon": "🚀"
+          },
+          {
+            "title": "Growth",
+            "description": "Drive customer success and growth in terms of overall profitability and return for shareholders.",
+            "icon": "📈"
+          }
+        ]
+      },
+      "whyChoose": {
+        "title": "Why Choose Us",
+        "description": "Customer success is our key business driver, everything we do is fully customised and designed for our their needs.",
+        "features": [
+          {
+            "title": "100% Dedication",
+            "description": "We are focused and a dedicated team, we qualify every single project and ensure delivery and customer satisfaction.",
+            "icon": "💯"
+          },
+          {
+            "title": "Experience",
+            "description": "We have relevant experience working with largest telecom companies in the world. We understand the challenges find opportunities.",
+            "icon": "🎯"
+          },
+          {
+            "title": "Technical Expertise",
+            "description": "We deal with complex networks, hardware and solutions. Technology is an integral part of our propositions and solution offerings.",
+            "icon": "⚙️"
+          },
+          {
+            "title": "Target Driven",
+            "description": "We are a result oriented organisation, we believe time is money and assure you to achieve desired goals with in the committed timelines.",
+            "icon": "📊"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contact Us",
+        "description": "Get in touch with our team - We're here to help you build better networks",
+        "backgroundImage": "/office.jpg"
+      },
+      "form": {
+        "title": "Send us a message",
+        "successMessage": "Thank you for contacting us! We will respond within 24 hours.",
+        "errorMessage": "Failed to send message. Please try again."
+      },
+      "info": {
+        "title": "Contact Information",
+        "address": {
+          "title": "Address",
+          "value": "150 ORCHARD ROAD #08-01\nORCHARD PLAZA, SINGAPORE, 238841",
+          "mapUrl": "https://maps.google.com/?q=150+ORCHARD+ROAD+08-01+ORCHARD+PLAZA+SINGAPORE+238841"
+        },
+        "phone": {
+          "title": "Custom Support & Sale",
+          "value": "+65 8647 8952"
+        },
+        "hours": {
+          "title": "Working Time",
+          "value": "Mon-Sat: 9 AM – 5 PM"
+        }
+      }
+    }
+  },
+  "partners": [
+    {
+      "name": "Cisco Systems",
+      "logo": "/logos/CISCO.png",
+      "description": "Global leader in networking hardware, software, and telecommunications equipment.",
+      "partnership": "Saitech Studio is an authorized Cisco partner, providing end-to-end deployment, configuration, and support services."
+    },
+    {
+      "name": "Juniper Networks",
+      "logo": "/logos/junpiter.png",
+      "description": "Leading provider of high-performance network infrastructure solutions.",
+      "partnership": "We collaborate with Juniper to deliver scalable network infrastructure solutions."
+    },
+    {
+      "name": "HPE",
+      "logo": "/logos/hpe.png",
+      "description": "Enterprise technology company providing servers, storage, networking, and cloud solutions.",
+      "partnership": "Saitech partners with HPE to deliver comprehensive data center solutions."
+    },
+    {
+      "name": "Dell EMC",
+      "logo": "/logos/emc.png",
+      "description": "World's largest technology corporation providing data storage and cloud computing solutions.",
+      "partnership": "Our partnership with Dell EMC enables us to provide enterprise storage solutions."
+    },
+    {
+      "name": "TP-Link",
+      "logo": "/logos/tplink.png",
+      "description": "Global provider of networking products for consumer and business markets.",
+      "partnership": "Saitech leverages TP-Link's cost-effective networking solutions for SME deployments."
+    },
+    {
+      "name": "Tata Communications",
+      "logo": "/logos/tata.png",
+      "description": "Leading global digital infrastructure provider offering network services.",
+      "partnership": "We work with Tata Communications to provide global connectivity solutions."
+    },
+    {
+      "name": "Vodafone",
+      "logo": "/logos/voda.png",
+      "description": "One of the world's largest telecommunications companies.",
+      "partnership": "Saitech collaborates with Vodafone to deliver mobile connectivity solutions."
+    },
+    {
+      "name": "Airtel",
+      "logo": "/logos/airtel.png",
+      "description": "Leading telecommunications services company across Asia and Africa.",
+      "partnership": "Our partnership with Airtel enables us to provide comprehensive telecom solutions."
+    }
+  ],
+  "services": [
+    {
+      "title": "IT & Telecom Equipment",
+      "desc": "We supply networking equipment for core, edge and wireless network.",
+      "image": "/IT.jpg",
+      "details": [
+        "Enterprise-grade routers, switches, and firewalls",
+        "Wireless access points and controllers",
+        "Optical transport and DWDM systems"
+      ]
+    },
+    {
+      "title": "Cloud Connectivity",
+      "desc": "Low latency solution for your point to point, MPLS, SDWAN connectivity.",
+      "image": "/cloudconnectivity.jpg",
+      "details": [
+        "Direct cloud connections to AWS, Azure, and GCP",
+        "MPLS and SD-WAN deployment and management",
+        "Multi-cloud networking and hybrid solutions"
+      ]
+    },
+    {
+      "title": "Networking Solutions",
+      "desc": "We cover network upgrade, migration, deployment and management solutions.",
+      "image": "/network-infa.jpg",
+      "details": [
+        "Network design and architecture consulting",
+        "Infrastructure migration and modernization",
+        "24/7 network monitoring and management"
+      ]
+    },
+    {
+      "title": "Data Centre",
+      "desc": "We offer storage and compute along with scalable disaster recovery solutions.",
+      "image": "/AdobeStock_87909563.jpg",
+      "details": [
+        "High-performance compute and storage systems",
+        "Disaster recovery and business continuity planning",
+        "Colocation and managed hosting services"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "David Chen",
+      "company": "Singapore Tech Corp",
+      "text": "Saitech transformed our network infrastructure. Their expertise is unmatched.",
+      "rating": 5
+    },
+    {
+      "name": "Sarah Lim",
+      "company": "Global Finance Ltd",
+      "text": "Outstanding support and reliable network solutions delivered on time.",
+      "rating": 5
+    },
+    {
+      "name": "Michael Wong",
+      "company": "Manufacturing Plus",
+      "text": "Professional service from consultation to implementation.",
+      "rating": 5
+    }
+  ],
+  "stats": [
+    { "number": 500, "suffix": "+", "label": "Projects Completed" },
+    { "number": 15, "suffix": "+", "label": "Years Experience" },
+    { "number": 200, "suffix": "+", "label": "Happy Clients" },
+    { "number": 24, "suffix": "/7", "label": "Support Available" }
+  ]
+}

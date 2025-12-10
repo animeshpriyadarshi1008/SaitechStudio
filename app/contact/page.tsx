@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import PageLoader from '@/components/PageLoader';
+import HeroSection from '@/components/sections/HeroSection';
+import { getPageContent } from '@/lib/content';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
@@ -18,10 +20,10 @@ export default function ContactPage() {
       });
       
       if (response.ok) {
-        alert('Thank you for contacting us! We will respond within 24 hours.');
+        alert(getPageContent('contact').form.successMessage);
         setFormData({ name: '', email: '', phone: '', company: '', message: '' });
       } else {
-        alert('Failed to send message. Please try again.');
+        alert(getPageContent('contact').form.errorMessage);
       }
     } catch (error) {
       alert('An error occurred. Please try again.');
@@ -33,19 +35,18 @@ export default function ContactPage() {
   return (
     <main className="pt-16 sm:pt-20">
       <PageLoader />
-      <section className="bg-cover bg-center bg-no-repeat relative flex items-center" style={{backgroundImage: 'url(/office.jpg)', height: '60vh'}}>
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container mx-auto px-4 sm:px-6 text-center max-w-5xl relative z-10">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold mb-4 sm:mb-6 text-white">Contact Us</h1>
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white">Get in touch with our team - We're here to help you build better networks</p>
-        </div>
-      </section>
+      <HeroSection 
+        title={getPageContent('contact').hero.title}
+        description={getPageContent('contact').hero.description}
+        backgroundImage={getPageContent('contact').hero.backgroundImage}
+        height="60vh"
+      />
       
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">Send us a message</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{getPageContent('contact').form.title}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm sm:text-base text-gray-700 mb-2 font-medium">Name *</label>
@@ -112,7 +113,7 @@ export default function ContactPage() {
             </div>
             
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">Contact Information</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{getPageContent('contact').info.title}</h2>
               <div className="space-y-6">
                 <div>
                   <h3 className="font-bold text-xl mb-2 text-gray-900">Address</h3>

@@ -1,17 +1,13 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { getStats } from '@/lib/content';
 
 export default function Stats() {
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState([0, 0, 0, 0]);
   const sectionRef = useRef(null);
   
-  const stats = [
-    { number: 500, suffix: "+", label: "Projects Completed" },
-    { number: 15, suffix: "+", label: "Years Experience" },
-    { number: 200, suffix: "+", label: "Happy Clients" },
-    { number: 24, suffix: "/7", label: "Support Available" }
-  ];
+  const stats = getStats();
   
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -1,106 +1,66 @@
 'use client';
 import PageLoader from '@/components/PageLoader';
+import HeroSection from '@/components/sections/HeroSection';
+import { getPageContent } from '@/lib/content';
 
 export default function ServicesPage() {
   return (
     <main>
       <PageLoader />
 
-      {/* Hero Section */}
-      <section className="bg-cover bg-center bg-no-repeat relative flex items-center" style={{backgroundImage: 'url(/services.jpg)', height: '67vh'}}>
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
-          <div className="text-center text-white">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Tailor-Made Services Unique & Creative</h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">Every network is designed, deployed and maintained differently, so we invest lots of time in understanding your fundamental requirements and build services collectively.</p>
-          </div>
-        </div>
-      </section>
+      <HeroSection 
+        title={getPageContent('services').hero.title}
+        description={getPageContent('services').hero.description}
+        backgroundImage={getPageContent('services').hero.backgroundImage}
+      />
 
       {/* Why Saitech */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">Why Saitech for Your Network Services</h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">With deep expertise in IT and telecom infrastructure, Saitech delivers comprehensive solutions that optimize your network performance while reducing operational costs.</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">{getPageContent('services').whySaitech.title}</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">{getPageContent('services').whySaitech.description}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
-              <div className="text-3xl mb-3">🎯</div>
-              <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 text-gray-900">Industry Expertise</h3>
-              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">Over a decade of experience working with global telecom operators and enterprises, understanding complex network challenges.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
-              <div className="text-3xl mb-3">💼</div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Vendor Partnerships</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Strategic relationships with Cisco, Juniper, HPE, and other leading vendors ensure access to best-in-class solutions.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
-              <div className="text-3xl mb-3">🔧</div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">End-to-End Support</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">From initial design and procurement to deployment, maintenance, and lifecycle management - we handle it all.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
-              <div className="text-3xl mb-3">💰</div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Cost Optimization</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Proven track record of reducing network costs by 30-40% through smart sourcing and lifecycle management strategies.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
-              <div className="text-3xl mb-3">🌍</div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Global Reach</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">International presence with ability to source, deploy, and support network infrastructure across multiple continents.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Rapid Deployment</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Fast-track procurement and deployment processes to meet urgent business requirements and tight deadlines.</p>
-            </div>
+            {getPageContent('services').whySaitech.features.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
+                <div className="text-3xl mb-3">{feature.icon}</div>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
+                <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Our Approach */}
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">Our Approach</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
-            <div className="text-center group cursor-pointer max-w-xs">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-2xl" style={{backgroundColor: 'rgba(0, 212, 255, 0.2)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.4)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.2)'}>
-                <span className="text-3xl sm:text-4xl transition-transform duration-500 group-hover:scale-110">📚</span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 transition-colors duration-300" style={{color: '#000'}} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#000'}>Learning</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">We are curious to learn how our customers are expanding, operating & maintaining their networks.</p>
-            </div>
-            
-            <div className="hidden md:block text-2xl lg:text-3xl px-4 transition-transform duration-300 hover:scale-125" style={{color: 'var(--accent)'}}>→</div>
-            
-            <div className="text-center group cursor-pointer max-w-xs">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:-rotate-12 group-hover:shadow-2xl" style={{backgroundColor: 'rgba(0, 212, 255, 0.2)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.4)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.2)'}>
-                <span className="text-3xl sm:text-4xl transition-transform duration-500 group-hover:scale-110">📊</span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 transition-colors duration-300" style={{color: '#000'}} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#000'}>Analysing</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Detailed analysis help us to understand and highlight the opportunities.</p>
-            </div>
-            
-            <div className="hidden md:block text-2xl lg:text-3xl px-4 transition-transform duration-300 hover:scale-125" style={{color: 'var(--accent)'}}>→</div>
-            
-            <div className="text-center group cursor-pointer max-w-xs">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-2xl" style={{backgroundColor: 'rgba(0, 212, 255, 0.2)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.4)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.2)'}>
-                <span className="text-3xl sm:text-4xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-180">💡</span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 transition-colors duration-300" style={{color: '#000'}} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#000'}>Proposing</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Combining best practices and latest trends we propose solutions based upon our learning and analysis.</p>
-            </div>
-            
-            <div className="hidden md:block text-2xl lg:text-3xl px-4 transition-transform duration-300 hover:scale-125" style={{color: 'var(--accent)'}}>→</div>
-            
-            <div className="text-center group cursor-pointer max-w-xs">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:-rotate-12 group-hover:shadow-2xl" style={{backgroundColor: 'rgba(0, 212, 255, 0.2)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.4)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.2)'}>
-                <span className="text-3xl sm:text-4xl transition-transform duration-500 group-hover:scale-110">✅</span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 transition-colors duration-300" style={{color: '#000'}} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#000'}>Implementing</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">A consultative approach to constantly seek feedback and implement solutions.</p>
-            </div>
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">{getPageContent('services').approach.title}</h2>
+          <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto">
+            {getPageContent('services').approach.steps.flatMap((step, index) => {
+              const elements = [
+                <div key={`step-${index}`} className="flex flex-col items-center text-center mb-8 md:mb-0">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{backgroundColor: '#E0F7FF', color: 'var(--accent)'}}>
+                    <span className="text-2xl">{step.icon}</span>
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-gray-900">{step.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed px-2 max-w-xs">{step.description}</p>
+                </div>
+              ];
+              
+              if (index < getPageContent('services').approach.steps.length - 1) {
+                elements.push(
+                  <div key={`arrow-${index}`} className="hidden md:flex items-center mx-4">
+                    <svg className="w-8 h-8" fill="var(--accent)" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                );
+              }
+              
+              return elements;
+            })}
           </div>
         </div>
       </section>

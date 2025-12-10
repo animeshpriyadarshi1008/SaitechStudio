@@ -1,72 +1,22 @@
 'use client';
 import PageLoader from '@/components/PageLoader';
+import HeroSection from '@/components/sections/HeroSection';
+import { getPageContent, getPartners } from '@/lib/content';
 
 export default function PartnersPage() {
-  const partners = [
-    {
-      name: "Cisco Systems",
-      logo: "/logos/CISCO.png",
-      description: "Global leader in networking hardware, software, and telecommunications equipment. Cisco provides comprehensive solutions for enterprise networking, security, and collaboration.",
-      partnership: "Saitech Studio is an authorized Cisco partner, providing end-to-end deployment, configuration, and support services for Cisco's enterprise networking solutions across Singapore and APAC region."
-    },
-    {
-      name: "Juniper Networks", 
-      logo: "/logos/junpiter.png",
-      description: "Leading provider of high-performance network infrastructure solutions including routers, switches, and security products for service providers and enterprises.",
-      partnership: "We collaborate with Juniper to deliver scalable network infrastructure solutions, specializing in their MX series routers and EX series switches for carrier-grade deployments."
-    },
-    {
-      name: "HPE (Hewlett Packard Enterprise)",
-      logo: "/logos/hpe.png", 
-      description: "Enterprise technology company providing servers, storage, networking, and cloud solutions to help organizations accelerate digital transformation.",
-      partnership: "Saitech partners with HPE to deliver comprehensive data center solutions, from server infrastructure to storage systems and hybrid cloud implementations."
-    },
-    {
-      name: "EMC Dell Technologies",
-      logo: "/logos/emc.png",
-      description: "World's largest technology corporation providing data storage, information security, virtualization, analytics, and cloud computing solutions.",
-      partnership: "Our partnership with Dell EMC enables us to provide enterprise storage solutions, backup systems, and data protection services for mission-critical applications."
-    },
-    {
-      name: "TP-Link",
-      logo: "/logos/tplink.png",
-      description: "Global provider of networking products including wireless routers, switches, and access points for both consumer and business markets.",
-      partnership: "Saitech leverages TP-Link's cost-effective networking solutions for SME deployments, providing reliable connectivity solutions with excellent price-performance ratio."
-    },
-    {
-      name: "Tata Communications",
-      logo: "/logos/tata.png",
-      description: "Leading global digital infrastructure provider offering network services, cloud solutions, and communication services across 200+ countries.",
-      partnership: "We work with Tata Communications to provide global connectivity solutions, MPLS networks, and international bandwidth services for our enterprise clients."
-    },
-    {
-      name: "Vodafone",
-      logo: "/logos/voda.png", 
-      description: "One of the world's largest telecommunications companies providing mobile and fixed-line services, broadband, and digital services globally.",
-      partnership: "Saitech collaborates with Vodafone to deliver mobile connectivity solutions, IoT services, and unified communications for businesses across multiple markets."
-    },
-    {
-      name: "Airtel",
-      logo: "/logos/airtel.png",
-      description: "Leading telecommunications services company providing mobile, broadband, and digital services across Asia and Africa with over 500 million customers.",
-      partnership: "Our partnership with Airtel enables us to provide comprehensive telecom solutions including mobile services, enterprise connectivity, and digital transformation services."
-    }
-  ];
+  const partners = getPartners().map(partner => ({
+    ...partner
+  }));
 
   return (
     <main className="pt-16 sm:pt-20">
       <PageLoader />
       
-      {/* Hero Section */}
-      <section className="bg-cover bg-center bg-no-repeat relative flex items-center" style={{backgroundImage: 'url(/partner.jpg)', height: '67vh'}}>
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
-          <div className="text-center text-white">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Our Strategic Partners</h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">Collaborating with industry leaders to deliver world-class networking and technology solutions</p>
-          </div>
-        </div>
-      </section>
+      <HeroSection 
+        title={getPageContent('partners').hero.title}
+        description={getPageContent('partners').hero.description}
+        backgroundImage={getPageContent('partners').hero.backgroundImage}
+      />
 
       {/* Partners Grid */}
       <section className="py-20 bg-gray-50">
