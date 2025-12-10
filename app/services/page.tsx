@@ -4,25 +4,27 @@ import HeroSection from '@/components/sections/HeroSection';
 import { getPageContent } from '@/lib/content';
 
 export default function ServicesPage() {
+  const servicesContent = getPageContent('services') as any;
+  
   return (
     <main>
       <PageLoader />
 
       <HeroSection 
-        title={getPageContent('services').hero.title}
-        description={getPageContent('services').hero.description}
-        backgroundImage={getPageContent('services').hero.backgroundImage}
+        title={servicesContent.hero.title}
+        description={servicesContent.hero.description}
+        backgroundImage={servicesContent.hero.backgroundImage}
       />
 
       {/* Why Saitech */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">{getPageContent('services').whySaitech.title}</h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">{getPageContent('services').whySaitech.description}</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">{servicesContent.whySaitech.title}</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">{servicesContent.whySaitech.description}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {getPageContent('services').whySaitech.features.map((feature, index) => (
+            {servicesContent.whySaitech.features.map((feature: any, index: number) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
                 <div className="text-3xl mb-3">{feature.icon}</div>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
@@ -36,9 +38,9 @@ export default function ServicesPage() {
       {/* Our Approach */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">{getPageContent('services').approach.title}</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">{servicesContent.approach.title}</h2>
           <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto">
-            {getPageContent('services').approach.steps.flatMap((step, index) => {
+            {servicesContent.approach.steps.flatMap((step: any, index: number) => {
               const elements = [
                 <div key={`step-${index}`} className="flex flex-col items-center text-center mb-8 md:mb-0">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{backgroundColor: '#E0F7FF', color: 'var(--accent)'}}>
@@ -49,7 +51,7 @@ export default function ServicesPage() {
                 </div>
               ];
               
-              if (index < getPageContent('services').approach.steps.length - 1) {
+              if (index < servicesContent.approach.steps.length - 1) {
                 elements.push(
                   <div key={`arrow-${index}`} className="hidden md:flex items-center mx-4">
                     <svg className="w-8 h-8" fill="var(--accent)" viewBox="0 0 20 20">

@@ -4,13 +4,15 @@ import HeroSection from '@/components/sections/HeroSection';
 import { getPageContent } from '@/lib/content';
 
 export default function AboutPage() {
+  const aboutContent = getPageContent('about') as any;
+  
   return (
     <main className="pt-16 sm:pt-20">
       <PageLoader />
       <HeroSection 
-        title={getPageContent('about').hero.title}
-        description={getPageContent('about').hero.description}
-        backgroundImage={getPageContent('about').hero.backgroundImage}
+        title={aboutContent.hero.title}
+        description={aboutContent.hero.description}
+        backgroundImage={aboutContent.hero.backgroundImage}
         height="67vh"
       />
 
@@ -19,15 +21,15 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">{getPageContent('about').company.title}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">{aboutContent.company.title}</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
-                {getPageContent('about').company.paragraphs.map((paragraph, index) => (
+                {aboutContent.company.paragraphs.map((paragraph: string, index: number) => (
                   <p key={index} className="text-base sm:text-lg">{paragraph}</p>
                 ))}
               </div>
             </div>
             <div className="space-y-6">
-              {getPageContent('about').company.values.map((value, index) => (
+              {aboutContent.company.values.map((value: any, index: number) => (
                 <div key={index} className={`bg-gradient-to-br from-${value.color}-50 to-${value.color === 'cyan' ? 'blue' : value.color === 'blue' ? 'indigo' : 'purple'}-50 p-6 rounded-lg border-l-4 border-${value.color}-500`}>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">{value.title}</h3>
                   <p className="text-gray-700 leading-relaxed">{value.description}</p>
@@ -42,14 +44,14 @@ export default function AboutPage() {
       <section className="py-12 sm:py-20" style={{background: 'linear-gradient(135deg, #f7f7f7 0%, #ffffff 100%)'}}>
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-gray-900">{getPageContent('about').sustainability.title}</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-gray-900">{aboutContent.sustainability.title}</h2>
             <p className="text-base sm:text-lg max-w-4xl mx-auto text-gray-700 px-4">
-              {getPageContent('about').sustainability.description}
+              {aboutContent.sustainability.description}
             </p>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-12">
-            {getPageContent('about').sustainability.features.map((feature, index) => (
+            {aboutContent.sustainability.features.map((feature: any, index: number) => (
               <div key={index} className="text-center group cursor-pointer bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all">
                 <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-2xl" style={{backgroundColor: 'rgba(0, 212, 255, 0.2)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.4)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 212, 255, 0.2)'}>
                   <span className="text-3xl sm:text-4xl transition-transform duration-500 group-hover:scale-110">{feature.icon}</span>

@@ -7,6 +7,7 @@ import { getPageContent } from '@/lib/content';
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
   const [loading, setLoading] = useState(false);
+  const contactContent = getPageContent('contact') as any;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,10 +28,10 @@ export default function ContactPage() {
       });
       
       if (response.ok) {
-        alert(getPageContent('contact').form.successMessage);
+        alert(contactContent.form.successMessage);
         setFormData({ name: '', email: '', phone: '', company: '', message: '' });
       } else {
-        alert(getPageContent('contact').form.errorMessage);
+        alert(contactContent.form.errorMessage);
       }
     } catch (error) {
       alert('An error occurred. Please try again.');
@@ -43,9 +44,9 @@ export default function ContactPage() {
     <main className="pt-16 sm:pt-20">
       <PageLoader />
       <HeroSection 
-        title={getPageContent('contact').hero.title}
-        description={getPageContent('contact').hero.description}
-        backgroundImage={getPageContent('contact').hero.backgroundImage}
+        title={contactContent.hero.title}
+        description={contactContent.hero.description}
+        backgroundImage={contactContent.hero.backgroundImage}
         height="60vh"
       />
       
@@ -53,7 +54,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{getPageContent('contact').form.title}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{contactContent.form.title}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm sm:text-base text-gray-700 mb-2 font-medium">Name *</label>
@@ -120,7 +121,7 @@ export default function ContactPage() {
             </div>
             
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{getPageContent('contact').info.title}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{contactContent.info.title}</h2>
               <div className="space-y-6">
                 <div>
                   <h3 className="font-bold text-xl mb-2 text-gray-900">Address</h3>
