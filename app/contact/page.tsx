@@ -4,11 +4,30 @@ import PageLoader from '@/components/PageLoader';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for contacting us! We will respond within 24 hours.');
-    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+    setLoading(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        alert('Thank you for contacting us! We will respond within 24 hours.');
+        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -86,8 +105,8 @@ export default function ContactPage() {
                     onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                   />
                 </div>
-                <button type="submit" className="w-full text-white py-2.5 sm:py-3 rounded-lg transition font-medium text-sm sm:text-base" style={{backgroundColor: 'var(--accent)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--hover)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent)'}>
-                  Send Message
+                <button type="submit" disabled={loading} className="w-full text-white py-2.5 sm:py-3 rounded-lg transition font-medium text-sm sm:text-base disabled:opacity-50" style={{backgroundColor: 'var(--accent)'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--hover)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent)'}>
+                  {loading ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
@@ -96,20 +115,18 @@ export default function ContactPage() {
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">Contact Information</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg sm:text-xl mb-2 text-gray-900">Address</h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">123 Business Street<br/>Tech City, TC 12345</p>
+                  <h3 className="font-bold text-xl mb-2 text-gray-900">Address</h3>
+                  <a href="https://maps.google.com/?q=150+ORCHARD+ROAD+08-01+ORCHARD+PLAZA+SINGAPORE+238841" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 leading-relaxed hover:text-cyan-600 transition-colors inline-block">
+                    150 ORCHARD ROAD #08-01<br/>ORCHARD PLAZA, SINGAPORE, 238841
+                  </a>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg sm:text-xl mb-2 text-gray-900">Email</h3>
-                  <p className="text-sm sm:text-base text-gray-600">info@saitechstudio.com</p>
+                  <h3 className="font-bold text-xl mb-2 text-gray-900">Custom Support & Sale</h3>
+                  <a href="tel:+6586478952" className="text-base text-gray-600 hover:text-cyan-600 transition-colors block">+65 8647 8952</a>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg sm:text-xl mb-2 text-gray-900">Phone</h3>
-                  <p className="text-sm sm:text-base text-gray-600">+1 (555) 123-4567</p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg sm:text-xl mb-2 text-gray-900">Business Hours</h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Monday - Friday: 9:00 AM - 6:00 PM<br/>Saturday - Sunday: Closed</p>
+                  <h3 className="font-bold text-xl mb-2 text-gray-900">Working Time</h3>
+                  <p className="text-base text-gray-600 leading-relaxed">Mon-Sat: 9 AM – 5 PM</p>
                 </div>
               </div>
             </div>

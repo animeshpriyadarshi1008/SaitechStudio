@@ -8,49 +8,49 @@ export default function ServicesPage() {
 
       {/* Hero Section */}
       <section className="bg-cover bg-center bg-no-repeat relative flex items-center" style={{backgroundImage: 'url(/services.png)', height: '67vh'}}>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto px-4 sm:px-6 text-center max-w-6xl relative z-10">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl border border-gray-200">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight">Tailor-Made Services Unique & Creative</h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-800 font-bold leading-relaxed">Every network is designed, deployed and maintained differently, so we invest lots of time in understanding your fundamental requirements and build services collectively.</p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 font-semibold leading-relaxed">Every network is designed, deployed and maintained differently, so we invest lots of time in understanding your fundamental requirements and build services collectively.</p>
           </div>
         </div>
       </section>
 
       {/* Why Saitech */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Why Saitech for Your Network Services</h2>
             <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">With deep expertise in IT and telecom infrastructure, Saitech delivers comprehensive solutions that optimize your network performance while reducing operational costs.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all border-l-4 border-cyan-500">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">🎯</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Industry Expertise</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Over a decade of experience working with global telecom operators and enterprises, understanding complex network challenges.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all border-l-4 border-blue-500">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">💼</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Vendor Partnerships</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Strategic relationships with Cisco, Juniper, HPE, and other leading vendors ensure access to best-in-class solutions.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all border-l-4 border-indigo-500">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">🔧</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">End-to-End Support</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">From initial design and procurement to deployment, maintenance, and lifecycle management - we handle it all.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all border-l-4 border-purple-500">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">💰</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Cost Optimization</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Proven track record of reducing network costs by 30-40% through smart sourcing and lifecycle management strategies.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all border-l-4 border-pink-500">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">🌍</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Global Reach</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">International presence with ability to source, deploy, and support network infrastructure across multiple continents.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all border-l-4 border-red-500">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-l-4 border-blue-600">
               <div className="text-3xl mb-3">⚡</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-900">Rapid Deployment</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Fast-track procurement and deployment processes to meet urgent business requirements and tight deadlines.</p>
@@ -60,7 +60,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-12 sm:py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">Our Approach</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
@@ -117,12 +117,12 @@ export default function ServicesPage() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 mt-8">
             <div className="space-y-3">
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Spares Management</span></div>
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Asset Valuation</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Spares Management</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Asset Valuation</span></div>
             </div>
             <div className="space-y-3">
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Repair & Test</span></div>
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Investment Recovery</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Repair & Test</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Investment Recovery</span></div>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Saitech Service Offerings */}
-      <section className="py-12 sm:py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">Comprehensive Service Portfolio</h2>
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
@@ -213,14 +213,14 @@ export default function ServicesPage() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
             <div className="space-y-3">
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Removal & De-Install</span></div>
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Inventory Listing</span></div>
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Transportations & Storage</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Removal & De-Install</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Inventory Listing</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Transportations & Storage</span></div>
             </div>
             <div className="space-y-3">
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Resale</span></div>
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">ROI</span></div>
-              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: '#0A2540'}}>✓</span><span className="text-sm sm:text-base">Recycling</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Resale</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">ROI</span></div>
+              <div className="flex items-center"><span className="mr-3 text-lg sm:text-xl" style={{color: 'var(--accent)'}}>✓</span><span className="text-sm sm:text-base">Recycling</span></div>
             </div>
           </div>
         </div>
@@ -231,7 +231,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 leading-tight">Engage with us to reduce fixed network cost – Start Today!</h2>
           <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">We aim to identify the areas of cost saving in global connectivity procurement, legacy network hardware procurement, disposal of surplus assets, spare management and enhance your productivity and profitability.</p>
-          <a href="/contact" className="inline-block bg-white text-cyan-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Say Hello</a>
+          <a href="/contact" className="inline-block bg-white text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Say Hello</a>
         </div>
       </section>
     </main>

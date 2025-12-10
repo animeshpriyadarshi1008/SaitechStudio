@@ -3,6 +3,7 @@ export default function Services() {
     { 
       title: 'IT & Telecom Equipment', 
       desc: 'We supply networking equipment for core, edge and wireless network. We enable our customers for SDN and NFV.',
+      image: '/IT.jpg',
       details: [
         'Enterprise-grade routers, switches, and firewalls',
         'Wireless access points and controllers',
@@ -15,6 +16,7 @@ export default function Services() {
     { 
       title: 'Cloud Connectivity', 
       desc: 'Low latency solution for your point to point, MPLS, SDWAN, Subsea, or cloud connectivity.',
+      image: '/cloudconnectivity.jpg',
       details: [
         'Direct cloud connections to AWS, Azure, and GCP',
         'MPLS and SD-WAN deployment and management',
@@ -27,6 +29,7 @@ export default function Services() {
     { 
       title: 'Networking Solutions', 
       desc: 'We cover network upgrade, migration, deployment and management solutions.',
+      image: '/network-infa.jpg',
       details: [
         'Network design and architecture consulting',
         'Infrastructure migration and modernization',
@@ -39,6 +42,7 @@ export default function Services() {
     { 
       title: 'Data Centre', 
       desc: 'We offer storage and compute along with scalable disaster recovery solutions.',
+      image: '/AdobeStock_87909563.jpg',
       details: [
         'High-performance compute and storage systems',
         'Virtualization and hyperconverged infrastructure',
@@ -58,7 +62,7 @@ export default function Services() {
       {services.map((s, i) => (
         <div key={i} className={`flex flex-col md:flex-row items-stretch gap-0 ${i % 2 ? 'md:flex-row-reverse' : ''}`} style={{backgroundColor: i % 2 ? '#ffffff' : '#f7f7f7'}}>
           <div className="flex-1 flex items-center justify-center p-6 md:p-12">
-            <div className="bg-gray-300 w-full h-64 md:h-96 rounded-lg"></div>
+            <img src={s.image} alt={s.title} className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg" />
           </div>
           <div className="flex-1 flex items-center p-6 md:p-12">
             <div className="max-w-xl">
@@ -67,7 +71,7 @@ export default function Services() {
               <ul className="space-y-3">
                 {s.details.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="text-cyan-500 text-lg mt-0.5 flex-shrink-0">✓</span>
+                    <span className="text-lg mt-0.5 flex-shrink-0" style={{color: 'var(--accent)'}}>✓</span>
                     <span className="text-gray-700 text-sm md:text-base leading-relaxed">{item}</span>
                   </li>
                 ))}

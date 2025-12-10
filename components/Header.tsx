@@ -16,6 +16,7 @@ export default function Header() {
           <div className="hidden md:flex space-x-8">
             <Link href="/" className="text-white transition-all duration-300 font-bold hover:scale-110" style={{}} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Home</Link>
             <Link href="/services" className="text-white transition-all duration-300 font-bold hover:scale-110" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Services</Link>
+            <Link href="/partners" className="text-white transition-all duration-300 font-bold hover:scale-110" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Partners</Link>
             <Link href="/about" className="text-white transition-all duration-300 font-bold hover:scale-110" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>About</Link>
             <Link href="/contact" className="text-white transition-all duration-300 font-bold hover:scale-110" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Contact</Link>
           </div>
@@ -29,6 +30,7 @@ export default function Header() {
           <div className="md:hidden mt-4 flex flex-col space-y-4 bg-black/90 p-4 rounded">
             <Link href="/" className="text-white transition-all duration-300 font-bold" onClick={() => setIsOpen(false)} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Home</Link>
             <Link href="/services" className="text-white transition-all duration-300 font-bold" onClick={() => setIsOpen(false)} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Services</Link>
+            <Link href="/partners" className="text-white transition-all duration-300 font-bold" onClick={() => setIsOpen(false)} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Partners</Link>
             <Link href="/about" className="text-white transition-all duration-300 font-bold" onClick={() => setIsOpen(false)} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>About</Link>
             <Link href="/contact" className="text-white transition-all duration-300 font-bold" onClick={() => setIsOpen(false)} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = '#fff'}>Contact</Link>
           </div>
