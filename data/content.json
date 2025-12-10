@@ -22,8 +22,8 @@
         "backgroundImage": "/services.jpg"
       },
       "whySaitech": {
-        "title": "Why Saitech for Your Network Services",
-        "description": "With deep expertise in IT and telecom infrastructure, Saitech delivers comprehensive solutions that optimize your network performance while reducing operational costs.",
+        "title": "Why Saitech Studio for Your Network Services",
+        "description": "With deep expertise in IT and telecom infrastructure, Saitech Studio delivers comprehensive solutions that optimize your network performance while reducing operational costs.",
         "features": [
           {
             "title": "Industry Expertise",
@@ -97,11 +97,11 @@
         "backgroundImage": "/whoweare.jpg"
       },
       "company": {
-        "title": "About Saitech",
+        "title": "About Saitech Studio",
         "paragraphs": [
-          "Saitech is a leading provider of IT and telecom infrastructure solutions, specializing in network design, deployment, and management services. With years of industry experience, we have established ourselves as a trusted partner for enterprises and telecom operators worldwide.",
+          "Saitech Studio is a leading provider of IT and telecom infrastructure solutions, specializing in network design, deployment, and management services. With years of industry experience, we have established ourselves as a trusted partner for enterprises and telecom operators worldwide.",
           "Our expertise spans across multiple domains including cloud connectivity, data center solutions, network security, and infrastructure optimization. We work with industry-leading vendors and maintain strategic partnerships to deliver cutting-edge solutions that drive business growth.",
-          "At Saitech, we believe in building long-term relationships with our clients by understanding their unique challenges and delivering customized solutions that exceed expectations. Our team of certified professionals brings deep technical knowledge and practical experience to every project."
+          "At Saitech Studio, we believe in building long-term relationships with our clients by understanding their unique challenges and delivering customized solutions that exceed expectations. Our team of certified professionals brings deep technical knowledge and practical experience to every project."
         ],
         "values": [
           {
@@ -246,7 +246,7 @@
       "name": "HPE",
       "logo": "/logos/hpe.png",
       "description": "Enterprise technology company providing servers, storage, networking, and cloud solutions.",
-      "partnership": "Saitech partners with HPE to deliver comprehensive data center solutions."
+      "partnership": "Saitech Studio partners with HPE to deliver comprehensive data center solutions."
     },
     {
       "name": "Dell EMC",
@@ -258,7 +258,7 @@
       "name": "TP-Link",
       "logo": "/logos/tplink.png",
       "description": "Global provider of networking products for consumer and business markets.",
-      "partnership": "Saitech leverages TP-Link's cost-effective networking solutions for SME deployments."
+      "partnership": "Saitech Studio leverages TP-Link's cost-effective networking solutions for SME deployments."
     },
     {
       "name": "Tata Communications",
@@ -270,7 +270,7 @@
       "name": "Vodafone",
       "logo": "/logos/voda.png",
       "description": "One of the world's largest telecommunications companies.",
-      "partnership": "Saitech collaborates with Vodafone to deliver mobile connectivity solutions."
+      "partnership": "Saitech Studio collaborates with Vodafone to deliver mobile connectivity solutions."
     },
     {
       "name": "Airtel",
@@ -325,7 +325,7 @@
     {
       "name": "David Chen",
       "company": "Singapore Tech Corp",
-      "text": "Saitech transformed our network infrastructure. Their expertise is unmatched.",
+      "text": "Saitech Studio transformed our network infrastructure. Their expertise is unmatched.",
       "rating": 5
     },
     {

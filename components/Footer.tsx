@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <h3 className="text-2xl font-bold mb-6">Saitech Studio</h3>
-            <p className="text-gray-400 leading-relaxed">Office Gold, Building 3,<br/>Chiswick Business Park,<br/>London, United Kingdom</p>
+            <p className="text-gray-400 leading-relaxed">150 ORCHARD ROAD #08-01<br/>ORCHARD PLAZA<br/>SINGAPORE, 238841</p>
           </div>
           <div>
             <h4 className="font-bold mb-6 text-lg">Links</h4>

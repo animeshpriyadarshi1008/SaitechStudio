@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="fixed w-full z-50" style={{backgroundColor: 'rgba(0, 0, 0, 1)'}}>
-      <nav className="container mx-auto px-6 py-0.5">
+      <nav className="max-w-7xl mx-auto px-4 py-0.5">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
             <img src="/4_.png" alt="Saitech Studio" style={{height: '80px', width: '100%', objectFit: 'contain'}} />
