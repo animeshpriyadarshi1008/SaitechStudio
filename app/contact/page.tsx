@@ -10,6 +10,13 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      alert('Please fill in all required fields (Name, Email, and Message).');
+      return;
+    }
+    
     setLoading(true);
     
     try {
