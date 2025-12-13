@@ -8,6 +8,5 @@ export const getPageContent = (page: string) => {
 
 export const getPartners = () => contentData.partners;
 export const getServices = () => contentData.services;
-export const getTestimonials = () => contentData.testimonials;
 export const getStats = () => contentData.stats;
 export const getHeroContent = () => contentData.hero;
