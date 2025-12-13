@@ -122,20 +122,48 @@ export default function ContactPage() {
             
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{contactContent.info.title}</h2>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div>
-                  <h3 className="font-bold text-xl mb-2 text-gray-900">Address</h3>
+                  <h3 className="font-bold text-xl mb-3 text-gray-900">Singapore HQ</h3>
                   <a href="https://maps.google.com/?q=150+ORCHARD+ROAD+08-01+ORCHARD+PLAZA+SINGAPORE+238841" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 leading-relaxed hover:text-cyan-600 transition-colors inline-block">
                     150 ORCHARD ROAD #08-01<br/>ORCHARD PLAZA, SINGAPORE, 238841
                   </a>
+                  <div className="mt-3">
+                    <a href="tel:+6589267073" className="text-base text-gray-600 hover:text-cyan-600 transition-colors block">+65 89267073</a>
+                    <p className="text-base text-gray-600">Mon-Sat: 9 AM – 5 PM</p>
+                  </div>
                 </div>
+                
                 <div>
-                  <h3 className="font-bold text-xl mb-2 text-gray-900">Custom Support & Sale</h3>
-                  <a href="tel:+6586478952" className="text-base text-gray-600 hover:text-cyan-600 transition-colors block">+65 8647 8952</a>
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-2 text-gray-900">Working Time</h3>
-                  <p className="text-base text-gray-600 leading-relaxed">Mon-Sat: 9 AM – 5 PM</p>
+                  <h3 className="font-bold text-xl mb-3 text-gray-900">Regional Offices</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Japan</h4>
+                      <p className="text-base text-gray-600 leading-relaxed">
+                        532-0011<br/>
+                        Osaka Shi, Yodogawa Ku, Nishinakajima 7-1-3-208
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">India</h4>
+                      <p className="text-base text-gray-600 leading-relaxed">
+                        Office No. 307, H-Block<br/>
+                        Outer Circle, Connaught Place<br/>
+                        New Delhi – 110001<br/>
+                        India
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">United Arab Emirates</h4>
+                      <p className="text-base text-gray-600 leading-relaxed">
+                        Office No. 412, Business Tower<br/>
+                        Sheikh Zayed Road<br/>
+                        Dubai, United Arab Emirates
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

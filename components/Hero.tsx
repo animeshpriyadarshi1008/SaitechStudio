@@ -53,9 +53,6 @@ export default function Hero() {
           <p className="text-white mb-6 sm:mb-8 leading-relaxed mx-auto" style={{fontSize: 'clamp(14px, 2vw, 20px)', maxWidth: '800px'}}>
 {heroContent.description}
           </p>
-          <a href="#services" className="inline-block text-white px-6 sm:px-8 py-2.5 sm:py-3 font-medium transition-colors" style={{backgroundColor: 'var(--accent)', borderRadius: '4px', color: '#0A2540'}} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--hover)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--accent)'}>
-            Quick Intro
-          </a>
         </div>
       </div>
     </div>

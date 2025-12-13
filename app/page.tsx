@@ -5,7 +5,6 @@ import About from '@/components/About';
 import PageLoader from '@/components/PageLoader';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Stats from '@/components/Stats';
-import Testimonials from '@/components/Testimonials';
 import ScrollAnimation from '@/components/ScrollAnimation';
 
 export default function Home() {
@@ -24,9 +23,6 @@ export default function Home() {
       </ScrollAnimation>
       <ScrollAnimation animation="fadeInUp">
         <Stats />
-      </ScrollAnimation>
-      <ScrollAnimation animation="fadeIn">
-        <Testimonials />
       </ScrollAnimation>
     </main>
   );

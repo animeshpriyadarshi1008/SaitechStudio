@@ -220,7 +220,7 @@
         },
         "phone": {
           "title": "Custom Support & Sale",
-          "value": "+65 8647 8952"
+          "value": "+65 89267073"
         },
         "hours": {
           "title": "Working Time",
@@ -321,30 +321,14 @@
       ]
     }
   ],
-  "testimonials": [
-    {
-      "name": "David Chen",
-      "company": "Singapore Tech Corp",
-      "text": "Saitech Studio transformed our network infrastructure. Their expertise is unmatched.",
-      "rating": 5
-    },
-    {
-      "name": "Sarah Lim",
-      "company": "Global Finance Ltd",
-      "text": "Outstanding support and reliable network solutions delivered on time.",
-      "rating": 5
-    },
-    {
-      "name": "Michael Wong",
-      "company": "Manufacturing Plus",
-      "text": "Professional service from consultation to implementation.",
-      "rating": 5
-    }
-  ],
+
   "stats": [
-    { "number": 500, "suffix": "+", "label": "Projects Completed" },
-    { "number": 15, "suffix": "+", "label": "Years Experience" },
+    { "number": 100, "suffix": "+", "label": "Projects Completed" },
     { "number": 200, "suffix": "+", "label": "Happy Clients" },
     { "number": 24, "suffix": "/7", "label": "Support Available" }
-  ]
+  ],
+  "statsSection": {
+    "title": "Saitech by numbers",
+    "description": "Trusted Globally for reliable network solutions"
+  }
 }

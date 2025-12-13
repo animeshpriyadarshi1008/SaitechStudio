@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-import { getStats } from '@/lib/content';
+import { getStats, getContent } from '@/lib/content';
 
 export default function Stats() {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,6 +8,7 @@ export default function Stats() {
   const sectionRef = useRef(null);
   
   const stats = getStats();
+  const content = getContent();
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,9 +59,9 @@ export default function Stats() {
     <section ref={sectionRef} className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">Saitech by Numbers</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">{content.statsSection.title}</h2>
           <p className="text-xl text-gray-600">
-            Trusted by enterprises across Singapore for reliable network solutions
+            {content.statsSection.description}
           </p>
         </div>
         
