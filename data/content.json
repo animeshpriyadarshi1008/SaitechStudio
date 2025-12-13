@@ -12,7 +12,75 @@
     ],
     "title": "We deliver customer success every day",
     "subtitle": "We",
-    "description": "We passionately adopt new technology to build sustainable networks whilst reducing fixed network cost and increasing profitability."
+    "description": "We passionately adopt new technology to build sustainable networks whilst reducing fixed network cost and increasing profitability.",
+    "slides": [
+      {
+        "id": 1,
+        "title": "STREAMLINING YOUR DIGITAL INFRASTRUCTURE",
+        "subtitle": "SAFE",
+        "description": "Ensuring Complete Protection for Your Critical Data",
+        "detailedDescription": "Our comprehensive security framework protects your digital assets with military-grade encryption, advanced firewall systems, and continuous threat monitoring. We implement multi-layered defense strategies that safeguard against cyber threats, data breaches, and unauthorized access, ensuring your business operations remain secure and compliant with industry standards.",
+        "image": "/banner/server.jpg",
+        "subtitles": [
+          "Fortified Network Security",
+          "Advanced Threat Protection",
+          "Multi-Layer Defense Systems",
+          "Secure Data Transmission",
+          "Enterprise-Grade Safety"
+        ],
+        "themeColor": "#3B82F6"
+      },
+      {
+        "id": 2,
+        "title": "Protecting Possibilities, Empowering Innovation",
+        "subtitle": "SECURE",
+        "description": "Confidence in Every Connection",
+        "detailedDescription": "Experience unparalleled security with our zero-trust architecture and end-to-end encryption protocols. Our cybersecurity experts deploy cutting-edge threat intelligence systems and real-time monitoring to protect your network infrastructure. From secure cloud integration to advanced authentication mechanisms, we ensure every connection is fortified against evolving cyber threats.",
+        "image": "/banner/chip.jpg",
+        "icon": "🔒",
+        "subtitles": [
+          "Zero-Trust Architecture",
+          "End-to-End Encryption",
+          "Cybersecurity Excellence",
+          "Threat Intelligence Systems",
+          "Secure Cloud Integration"
+        ],
+        "themeColor": "#EF4444"
+      },
+      {
+        "id": 3,
+        "title": "Reliable Pathways to Your Digital Success",
+        "subtitle": "RELIABLE",
+        "description": "Seamless Connections for Business Growth",
+        "detailedDescription": "Build your business on a foundation of unwavering reliability with our 99.9% uptime guarantee and redundant infrastructure systems. Our fault-tolerant networks ensure continuous operations through automated failover mechanisms, load balancing, and 24/7 proactive monitoring. Experience seamless connectivity that scales with your business growth and adapts to changing demands.",
+        "image": "/banner/telecom.jpg",
+        "subtitles": [
+          "99.9% Uptime Guarantee",
+          "Redundant Infrastructure",
+          "High-Availability Networks",
+          "Fault-Tolerant Systems",
+          "24/7 Network Monitoring"
+        ],
+        "themeColor": "#10B981"
+      },
+      {
+        "id": 4,
+        "title": "Powering a Greener Digital Future",
+        "subtitle": "SUSTAINABLE",
+        "description": "Efficiency, Innovation, and Environmental Care",
+        "detailedDescription": "Lead the digital transformation while minimizing environmental impact through our sustainable technology solutions. Our energy-efficient infrastructure, carbon-neutral operations, and renewable energy integration reduce your carbon footprint by up to 40%. Embrace green technology adoption that not only protects the planet but also optimizes operational costs and enhances your corporate sustainability goals.",
+        "image": "/banner/chart.jpg",
+        "icon": "🌱",
+        "subtitles": [
+          "Energy-Efficient Solutions",
+          "Carbon-Neutral Operations",
+          "Green Technology Adoption",
+          "Eco-Friendly Infrastructure",
+          "Renewable Energy Integration"
+        ],
+        "themeColor": "#8B5CF6"
+      }
+    ]
   },
   "pages": {
     "services": {

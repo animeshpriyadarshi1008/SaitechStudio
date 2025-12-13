@@ -30,3 +30,15 @@ export interface Feature {
   description: string;
   icon: string;
 }
+
+export interface Slide {
+  id: number;
+  title: string;
+  subtitle: string;
+  description: string;
+  detailedDescription?: string;
+  image: string;
+  icon?: string;
+  subtitles?: string[];
+  themeColor?: string;
+}
