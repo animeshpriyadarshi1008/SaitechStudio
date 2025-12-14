@@ -126,7 +126,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-xl mb-3 text-gray-900">Singapore HQ</h3>
                   <a href="https://maps.google.com/?q=150+ORCHARD+ROAD+08-01+ORCHARD+PLAZA+SINGAPORE+238841" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 leading-relaxed hover:text-cyan-600 transition-colors inline-block">
-                    150 ORCHARD ROAD #08-01<br/>ORCHARD PLAZA, SINGAPORE, 238841
+                    150 Orchard Road #08-01<br/>Orchard Plaza, Singapore, 238841
                   </a>
                   <div className="mt-3">
                     <a href="tel:+6589267073" className="text-base text-gray-600 hover:text-cyan-600 transition-colors block">+65 89267073</a>

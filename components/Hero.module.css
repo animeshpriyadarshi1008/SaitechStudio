@@ -149,7 +149,12 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .slideshow {
-    height: 70vh;
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .slideItem img {
+    object-position: center center;
   }
   
   .dotNavigation {

@@ -129,9 +129,8 @@ export default function Hero() {
             <img
               src={slide.image}
               alt={slide.subtitle}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-cover object-center"
             />
-            <div className="absolute inset-0 bg-black/40"></div>
           </div>
         ))}
       </div>
