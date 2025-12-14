@@ -149,7 +149,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .slideshow {
-    height: 60vh;
+    height: 70vh;
     min-height: 400px;
   }
   
