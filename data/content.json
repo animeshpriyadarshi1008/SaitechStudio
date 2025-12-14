@@ -329,38 +329,38 @@
       "partnership": "Saitech Studio leverages TP-Link's cost-effective networking solutions for SME deployments."
     },
     {
-      "name": "ss",
+      "name": "Fortinet",
       "logo": "/logos/fortinet.png",
       "description": "Leading cybersecurity company providing network security appliances and services.",
       "partnership": "Saitech Studio partners with Fortinet to deliver comprehensive cybersecurity solutions."
     },
     {
       "name": "Poly",
-      "logo": "/logos/cisco-gray.png",
+      "logo": "/logos/poly.png",
       "description": "Global communications company specializing in video, voice and content sharing solutions.",
       "partnership": "We collaborate with Poly to provide unified communications and collaboration solutions."
     },
     {
       "name": "Zebra Technologies",
-      "logo": "/logos/hpe-gray.png",
+      "logo": "/logos/zebra.png",
       "description": "Leading provider of enterprise mobile computing, data capture, and automatic identification solutions.",
       "partnership": "Saitech Studio works with Zebra to deliver mobile computing and data capture solutions."
     },
     {
       "name": "Jabra",
-      "logo": "/logos/emc-gray.png",
+      "logo": "/logos/jabra.png",
       "description": "Danish brand specializing in audio equipment and video conferencing systems for businesses.",
       "partnership": "Our partnership with Jabra enables us to provide professional audio and video solutions."
     },
     {
       "name": "HP Inc",
-      "logo": "/logos/tplink-gray.png",
+      "logo": "/logos/hp.png",
       "description": "Multinational information technology company providing personal computing and printing solutions.",
       "partnership": "Saitech Studio partners with HP to deliver computing and printing infrastructure solutions."
     },
     {
       "name": "Avaya",
-      "logo": "/logos/juniper-gray.png",
+      "logo": "/logos/avaya.png",
       "description": "Global leader in business communications systems and unified communications solutions.",
       "partnership": "We work with Avaya to provide enterprise communication and collaboration platforms."
     }
