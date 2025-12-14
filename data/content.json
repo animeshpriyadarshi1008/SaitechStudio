@@ -2,7 +2,7 @@
   "site": {
     "name": "Saitech Studio",
     "tagline": "Network Transformation Services",
-    "description": "We deliver customer success every day"
+    "description": "We deliver success every day"
   },
   "hero": {
     "texts": [
@@ -10,7 +10,7 @@
       " design and deploy networks ",
       " manage and maintain networks"
     ],
-    "title": "We deliver customer success every day",
+    "title": "We deliver success every day",
     "subtitle": "We",
     "description": "We passionately adopt new technology to build sustainable networks whilst reducing fixed network cost and increasing profitability.",
     "slides": [
@@ -130,7 +130,7 @@
         "steps": [
           {
             "title": "Learning",
-            "description": "We are curious to learn how our customers are expanding, operating & maintaining their networks.",
+            "description": "We are curious to learn how networks are expanding, operating & maintained.",
             "icon": "📚"
           },
           {
@@ -179,12 +179,12 @@
           },
           {
             "title": "Our Vision",
-            "description": "To be the most trusted and preferred partner for enterprises seeking world-class network infrastructure solutions, recognized for our technical excellence, innovation, and commitment to customer success.",
+            "description": "To be the most trusted and preferred partner for enterprises seeking world-class network infrastructure solutions, recognized for our technical excellence, innovation, and commitment to success.",
             "color": "blue"
           },
           {
             "title": "Our Values",
-            "description": "Integrity, innovation, excellence, and customer-centricity form the foundation of everything we do. We are committed to delivering value through ethical practices and continuous improvement.",
+            "description": "Integrity, innovation, excellence, and client-centricity form the foundation of everything we do. We are committed to delivering value through ethical practices and continuous improvement.",
             "color": "indigo"
           }
         ]
@@ -217,11 +217,11 @@
       },
       "objectives": {
         "title": "Corporate Objectives",
-        "description": "We work in a dynamic environment, our customers innovate and compete to achieve their goals. We pride ourself in maintaining trust, integrity and ethics.",
+        "description": "We work in a dynamic environment where innovation and competition drive success. We pride ourself in maintaining trust, integrity and ethics.",
         "items": [
           {
             "title": "Loyalty",
-            "description": "To earn loyalty and trust from our customers by providing the highest level of quality and value.",
+            "description": "To earn loyalty and trust by providing the highest level of quality and value.",
             "icon": "🤝"
           },
           {
@@ -236,18 +236,18 @@
           },
           {
             "title": "Growth",
-            "description": "Drive customer success and growth in terms of overall profitability and return for shareholders.",
+            "description": "Drive success and growth in terms of overall profitability and return for shareholders.",
             "icon": "📈"
           }
         ]
       },
       "whyChoose": {
         "title": "Why Choose Us",
-        "description": "Customer success is our key business driver, everything we do is fully customised and designed for our their needs.",
+        "description": "Success is our key business driver, everything we do is fully customised and designed for specific needs.",
         "features": [
           {
             "title": "100% Dedication",
-            "description": "We are focused and a dedicated team, we qualify every single project and ensure delivery and customer satisfaction.",
+            "description": "We are focused and a dedicated team, we qualify every single project and ensure delivery and satisfaction.",
             "icon": "💯"
           },
           {
@@ -287,7 +287,7 @@
           "mapUrl": "https://maps.google.com/?q=150+ORCHARD+ROAD+08-01+ORCHARD+PLAZA+SINGAPORE+238841"
         },
         "phone": {
-          "title": "Custom Support & Sale",
+          "title": "Technical Support & Sales",
           "value": "+65 89267073"
         },
         "hours": {
@@ -302,7 +302,7 @@
       "name": "Cisco Systems",
       "logo": "/logos/CISCO.png",
       "description": "Global leader in networking hardware, software, and telecommunications equipment.",
-      "partnership": "Saitech Studio is an authorized Cisco partner, providing end-to-end deployment, configuration, and support services."
+      "partnership": "Saitech Studio is a Cisco partner, providing end-to-end deployment, configuration, and support services."
     },
     {
       "name": "Juniper Networks",

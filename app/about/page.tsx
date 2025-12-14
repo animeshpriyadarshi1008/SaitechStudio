@@ -70,7 +70,7 @@ export default function AboutPage() {
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-white">Corporate Objectives</h2>
             <p className="text-base sm:text-lg max-w-4xl mx-auto text-gray-100 px-4">
-              We work in a dynamic environment, our customers innovate and compete to achieve their goals. We pride ourself in maintaining trust, integrity and ethics.
+              We work in a dynamic environment where innovation and competition drive success. We pride ourself in maintaining trust, integrity and ethics.
             </p>
           </div>
           
@@ -81,7 +81,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Loyalty</h3>
               <p className="text-sm sm:text-base text-gray-100 leading-relaxed">
-                To earn loyalty and trust from our customers by providing the highest level of quality and value.
+                To earn loyalty and trust by providing the highest level of quality and value.
               </p>
             </div>
             
@@ -111,7 +111,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">Growth</h3>
               <p className="text-sm sm:text-base text-gray-100 leading-relaxed">
-                Drive customer success and growth in terms of overall profitability and return for shareholders.
+                Drive success and growth in terms of overall profitability and return for shareholders.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-6 text-gray-900">Why Choose Us</h2>
             <p className="text-base sm:text-lg max-w-4xl mx-auto text-gray-700 px-4">
-              Customer success is our key business driver, everything we do is fully customised and designed for our their needs.
+              Success is our key business driver, everything we do is fully customised and designed for specific needs.
             </p>
           </div>
           
@@ -135,7 +135,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">100% Dedication</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                We are focused and a dedicated team, we qualify every single project and ensure delivery and customer satisfaction.
+                We are focused and a dedicated team, we qualify every single project and ensure delivery and satisfaction.
               </p>
             </div>
             

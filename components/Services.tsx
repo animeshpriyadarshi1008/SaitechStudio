@@ -6,7 +6,7 @@ export default function Services() {
     <section id="services" className="bg-white">
       <div className="text-center py-16" style={{backgroundColor: '#f7f7f7'}}>
         <div className="max-w-7xl mx-auto px-2 sm:px-4">
-          <h2 className="text-4xl font-bold text-gray-900">What we do for our customers</h2>
+          <h2 className="text-4xl font-bold text-gray-900">What we do</h2>
         </div>
       </div>
       {SERVICES.map((s, i) => (
