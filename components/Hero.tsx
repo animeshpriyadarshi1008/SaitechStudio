@@ -199,7 +199,7 @@ export default function Hero() {
           </button>
 
           {/* Thumbnail scroll container */}
-          <div className="thumbnail-scroll flex md:justify-center md:overflow-visible overflow-x-auto scrollbar-hide px-4 md:px-4 py-3 md:py-4 snap-x snap-mandatory md:snap-none">
+          <div className="thumbnail-scroll flex md:justify-center md:overflow-visible overflow-x-auto px-4 md:px-4 py-3 md:py-4 snap-x snap-mandatory md:snap-none" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
             {slides.map((slide, index) => (
               <button
                 key={slide.id}
