@@ -352,12 +352,7 @@
       "description": "Danish brand specializing in audio equipment and video conferencing systems for businesses.",
       "partnership": "Our partnership with Jabra enables us to provide professional audio and video solutions."
     },
-    {
-      "name": "HP Inc",
-      "logo": "/logos/hp.png",
-      "description": "Multinational information technology company providing personal computing and printing solutions.",
-      "partnership": "Saitech Studio partners with HP to deliver computing and printing infrastructure solutions."
-    },
+
     {
       "name": "Avaya",
       "logo": "/logos/avaya.png",
