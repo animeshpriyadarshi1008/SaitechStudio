@@ -12,9 +12,7 @@ export default function Home() {
     <main>
       <PageLoader />
       <Hero />
-      <ScrollAnimation animation="fadeInUp">
-        <Services />
-      </ScrollAnimation>
+      <Services />
       <ScrollAnimation animation="fadeInLeft">
         <About />
       </ScrollAnimation>

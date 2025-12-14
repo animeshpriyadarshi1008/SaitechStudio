@@ -52,7 +52,7 @@ export default function ContactPage() {
       
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+          <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900">{contactContent.form.title}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -136,32 +136,32 @@ export default function ContactPage() {
                 
                 <div>
                   <h3 className="font-bold text-xl mb-3 text-gray-900">Regional Offices</h3>
-                  <div className="space-y-4">
+                  <div className="space-y-8">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Japan</h4>
-                      <p className="text-base text-gray-600 leading-relaxed">
+                      <h4 className="font-bold text-xl mb-3 text-gray-900">Japan</h4>
+                      <a href="https://maps.google.com/?q=532-0011+Osaka+Shi+Yodogawa+Ku+Nishinakajima+7-1-3-208" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 leading-relaxed hover:text-cyan-600 transition-colors inline-block">
                         532-0011<br/>
                         Osaka Shi, Yodogawa Ku, Nishinakajima 7-1-3-208
-                      </p>
+                      </a>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">India</h4>
-                      <p className="text-base text-gray-600 leading-relaxed">
+                      <h4 className="font-bold text-xl mb-3 text-gray-900">India</h4>
+                      <a href="https://maps.google.com/?q=Office+No.+307+H-Block+Outer+Circle+Connaught+Place+New+Delhi+110001+India" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 leading-relaxed hover:text-cyan-600 transition-colors inline-block">
                         Office No. 307, H-Block<br/>
                         Outer Circle, Connaught Place<br/>
                         New Delhi – 110001<br/>
                         India
-                      </p>
+                      </a>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">United Arab Emirates</h4>
-                      <p className="text-base text-gray-600 leading-relaxed">
+                      <h4 className="font-bold text-xl mb-3 text-gray-900">United Arab Emirates</h4>
+                      <a href="https://maps.google.com/?q=Office+No.+412+Business+Tower+Sheikh+Zayed+Road+Dubai+UAE" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 leading-relaxed hover:text-cyan-600 transition-colors inline-block">
                         Office No. 412, Business Tower<br/>
                         Sheikh Zayed Road<br/>
                         Dubai, United Arab Emirates
-                      </p>
+                      </a>
                     </div>
                   </div>
                 </div>

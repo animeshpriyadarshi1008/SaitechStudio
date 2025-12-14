@@ -40,14 +40,14 @@ export default function WhatWeDo() {
         
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                <div className="absolute inset-0 bg-black/20"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>

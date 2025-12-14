@@ -2,8 +2,19 @@
 .slideshow {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
+}
+
+.slideContainer {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideItem {
+  flex: 0 0 100%;
+  position: relative;
 }
 
 .slide {
@@ -40,43 +51,57 @@
   animation: fadeInUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0.2s both;
 }
 
-.thumbnailNav {
+.dotNavigation {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-  padding: 1rem;
-}
-
-.thumbnailContainer {
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+  gap: 1rem;
 }
 
-.thumbnail {
-  min-width: 250px;
-  height: 80px;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid transparent;
+.dotButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
 }
 
-.thumbnail:hover {
-  background: rgba(255, 255, 255, 0.1);
+.dotButton:hover {
+  opacity: 0.9;
 }
 
-.thumbnail.active {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.8);
+.dotButton.active {
+  opacity: 1;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.dotLabel {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.dotDescription {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.625rem;
+  text-align: center;
+  max-width: 80px;
+  line-height: 1.2;
 }
 
 .autoplayButton {
@@ -122,14 +147,27 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .thumbnail {
-    min-width: 200px;
-    height: 60px;
+  .slideshow {
+    height: 70vh;
   }
   
-  .thumbnailContainer {
-    flex-wrap: wrap;
-    gap: 0.25rem;
+  .dotNavigation {
+    gap: 0.75rem;
+    bottom: 1.5rem;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .dotLabel {
+    font-size: 0.625rem;
+  }
+  
+  .dotDescription {
+    font-size: 0.5rem;
+    max-width: 60px;
   }
   
   .slideTitle {
@@ -142,23 +180,30 @@
 }
 
 @media (max-width: 480px) {
-  .thumbnail {
-    min-width: 150px;
-    height: 50px;
+  .dotNavigation {
+    gap: 0.5rem;
+    bottom: 1rem;
   }
   
-  .thumbnailContainer {
-    flex-direction: column;
-    align-items: center;
+  .dot {
+    width: 8px;
+    height: 8px;
   }
   
-  .thumbnail {
-    min-width: 280px;
-    width: 100%;
-    max-width: 320px;
+  .dotLabel {
+    font-size: 0.5rem;
+  }
+  
+  .dotDescription {
+    display: none;
   }
   
   .autoplayButton {
     padding: 0.5rem;
+  }
+  
+  .dotNavigation {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

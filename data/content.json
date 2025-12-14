@@ -329,22 +329,40 @@
       "partnership": "Saitech Studio leverages TP-Link's cost-effective networking solutions for SME deployments."
     },
     {
-      "name": "Tata Communications",
-      "logo": "/logos/tata.png",
-      "description": "Leading global digital infrastructure provider offering network services.",
-      "partnership": "We work with Tata Communications to provide global connectivity solutions."
+      "name": "Fortinet",
+      "logo": "/logos/fortinet.png",
+      "description": "Leading cybersecurity company providing network security appliances and services.",
+      "partnership": "Saitech Studio partners with Fortinet to deliver comprehensive cybersecurity solutions."
     },
     {
-      "name": "Vodafone",
-      "logo": "/logos/voda.png",
-      "description": "One of the world's largest telecommunications companies.",
-      "partnership": "Saitech Studio collaborates with Vodafone to deliver mobile connectivity solutions."
+      "name": "Poly",
+      "logo": "/logos/poly.png",
+      "description": "Global communications company specializing in video, voice and content sharing solutions.",
+      "partnership": "We collaborate with Poly to provide unified communications and collaboration solutions."
     },
     {
-      "name": "Airtel",
-      "logo": "/logos/airtel.png",
-      "description": "Leading telecommunications services company across Asia and Africa.",
-      "partnership": "Our partnership with Airtel enables us to provide comprehensive telecom solutions."
+      "name": "Zebra Technologies",
+      "logo": "/logos/zebra.png",
+      "description": "Leading provider of enterprise mobile computing, data capture, and automatic identification solutions.",
+      "partnership": "Saitech Studio works with Zebra to deliver mobile computing and data capture solutions."
+    },
+    {
+      "name": "Jabra",
+      "logo": "/logos/jabra.png",
+      "description": "Danish brand specializing in audio equipment and video conferencing systems for businesses.",
+      "partnership": "Our partnership with Jabra enables us to provide professional audio and video solutions."
+    },
+    {
+      "name": "HP Inc",
+      "logo": "/logos/hp.png",
+      "description": "Multinational information technology company providing personal computing and printing solutions.",
+      "partnership": "Saitech Studio partners with HP to deliver computing and printing infrastructure solutions."
+    },
+    {
+      "name": "Avaya",
+      "logo": "/logos/avaya.png",
+      "description": "Global leader in business communications systems and unified communications solutions.",
+      "partnership": "We work with Avaya to provide enterprise communication and collaboration platforms."
     }
   ],
   "services": [

@@ -1,4 +1,6 @@
 'use client';
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="text-white py-16" style={{backgroundColor: '#303030'}}>
@@ -11,10 +13,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-6 text-lg">Links</h4>
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#home" className="transition" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>Home</a></li>
-              <li><a href="#services" className="transition" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>Services</a></li>
-              <li><a href="#about" className="transition" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>About</a></li>
-              <li><a href="#contact" className="transition" onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>Contact</a></li>
+              <li><Link href="/" className="transition hover:text-cyan-400">Home</Link></li>
+              <li><Link href="/services" className="transition hover:text-cyan-400">Services</Link></li>
+              <li><Link href="/about" className="transition hover:text-cyan-400">About</Link></li>
+              <li><Link href="/contact" className="transition hover:text-cyan-400">Contact</Link></li>
             </ul>
           </div>
           <div>

@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getHeroContent } from '@/lib/content';
 import { Slide } from '@/types';
 import styles from './Hero.module.css';
@@ -10,7 +10,8 @@ export default function Hero() {
   const [isAutoplay, setIsAutoplay] = useState(true);
   const [progress, setProgress] = useState(0);
   const [currentSubtitleIndex, setCurrentSubtitleIndex] = useState(0);
-  const [showDetailedDescription, setShowDetailedDescription] = useState(false);
+  const [slideDirection, setSlideDirection] = useState('next');
+
   
   const heroContent = getHeroContent();
   const slides: Slide[] = heroContent.slides || [
@@ -18,7 +19,7 @@ export default function Hero() {
       id: 1,
       title: "STREAMLINING YOUR DIGITAL INFRASTRUCTURE",
       subtitle: "SAFE",
-      description: "Ensuring Complete Protection for Your Critical Data",
+      description: "Ensuring Complete\nProtection for Your\nCritical Data",
       detailedDescription: "Our comprehensive security framework protects your digital assets with military-grade encryption and continuous threat monitoring.",
       image: "/banner/server.jpg",
       subtitles: ["Fortified Network Security", "Advanced Threat Protection", "Multi-Layer Defense Systems"],
@@ -28,7 +29,7 @@ export default function Hero() {
       id: 2,
       title: "Protecting Possibilities, Empowering Innovation",
       subtitle: "SECURE",
-      description: "Confidence in Every Connection",
+      description: "Confidence in\nEvery Connection",
       detailedDescription: "Experience unparalleled security with zero-trust architecture and end-to-end encryption protocols.",
       image: "/banner/chip.jpg",
       icon: "🔒",
@@ -39,7 +40,7 @@ export default function Hero() {
       id: 3,
       title: "Reliable Pathways to Your Digital Success",
       subtitle: "RELIABLE",
-      description: "Seamless Connections for Business Growth",
+      description: "Seamless Connections\nfor Business Growth",
       detailedDescription: "Build your business on unwavering reliability with 99.9% uptime guarantee and redundant infrastructure systems.",
       image: "/banner/telecom.jpg",
       subtitles: ["99.9% Uptime Guarantee", "Redundant Infrastructure", "High-Availability Networks"],
@@ -49,7 +50,7 @@ export default function Hero() {
       id: 4,
       title: "Powering a Greener Digital Future",
       subtitle: "SUSTAINABLE",
-      description: "Efficiency, Innovation, and Environmental Care",
+      description: "Efficiency, Innovation,\nand Environmental Care",
       detailedDescription: "Lead digital transformation while minimizing environmental impact through sustainable technology solutions.",
       image: "/banner/chart.jpg",
       icon: "🌱",
@@ -83,27 +84,6 @@ export default function Hero() {
   }, [isAutoplay, currentSlide]);
 
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      switch (event.key) {
-        case 'ArrowLeft':
-          setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-          break;
-        case 'ArrowRight':
-          setCurrentSlide((prev) => (prev + 1) % slides.length);
-          break;
-        case ' ':
-          event.preventDefault();
-          toggleAutoplay();
-          break;
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [slides.length]);
-
-  // Rotate subtitles every 2 seconds
-  useEffect(() => {
     const currentSlideData = slides[currentSlide];
     if (!currentSlideData?.subtitles?.length) return;
 
@@ -114,12 +94,25 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, [currentSlide, slides]);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setProgress(0);
-    setCurrentSubtitleIndex(0);
-    setShowDetailedDescription(false);
-  };
+  useEffect(() => {
+    // Only auto-scroll on mobile devices
+    if (window.innerWidth >= 768) return;
+    
+    const scrollContainer = document.querySelector('.thumbnail-scroll');
+    if (scrollContainer) {
+      if (currentSlide === 0) {
+        // When going back to first slide, scroll to the beginning
+        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        const activeButton = scrollContainer.children[currentSlide] as HTMLElement;
+        if (activeButton) {
+          activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    }
+  }, [currentSlide]);
+
+
 
   const toggleAutoplay = () => {
     setIsAutoplay(!isAutoplay);
@@ -127,25 +120,25 @@ export default function Hero() {
 
   return (
     <div className={styles.slideshow}>
-      {/* Background Images */}
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`${styles.slide} ${currentSlide === index ? styles.active : ''}`}
-        >
-          <img
-            src={slide.image}
-            alt={slide.subtitle}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-      ))}
+      <div className={styles.slideContainer} style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={styles.slideItem}
+          >
+            <img
+              src={slide.image}
+              alt={slide.subtitle}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+        ))}
+      </div>
 
       {/* Slide Content */}
       <div className={styles.slideContent}>
         <div className="text-center px-4 sm:px-6 max-w-5xl mx-auto">
-
           <h1 className={`${styles.slideTitle} text-white font-bold mb-4 sm:mb-6 leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}>
             <TypingEffect
               text={slides[currentSlide].title}
@@ -170,81 +163,116 @@ export default function Hero() {
             </div>
           )}
           <p className={`${styles.slideDescription} text-white/90 mb-4 leading-relaxed mx-auto text-base sm:text-lg md:text-xl max-w-3xl`}>
-            {showDetailedDescription && slides[currentSlide].detailedDescription 
-              ? slides[currentSlide].detailedDescription 
-              : slides[currentSlide].description}
+            {slides[currentSlide].description}
           </p>
-          {slides[currentSlide].detailedDescription && (
-            <button
-              onClick={() => setShowDetailedDescription(!showDetailedDescription)}
-              className="text-white/80 hover:text-white text-sm underline transition-colors duration-300 mb-4"
-            >
-              {showDetailedDescription ? 'Show Less' : 'Learn More'}
-            </button>
-          )}
         </div>
       </div>
 
-      {/* Autoplay Control */}
-      <div className="absolute top-4 right-4 z-20">
+
+
+      {/* Modern Thumbnail Navigation */}
+      <div className="absolute bottom-0 left-0 right-0 z-20">
+        {/* Gradient overlay for better blending */}
+        <div className="absolute inset-x-0 -top-20 h-20 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+        
+        {/* Navigation container */}
+        <div className="relative bg-white/95 backdrop-blur-md border-t border-white/20 shadow-2xl">
+          {/* Mobile scroll arrows */}
+          <button
+            onClick={() => document.querySelector('.thumbnail-scroll')?.scrollBy({left: -200, behavior: 'smooth'})}
+            className="absolute left-1 top-1/2 -translate-y-1/2 z-30 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white p-1.5 rounded-full shadow-lg transition-all duration-300 md:hidden transform hover:scale-110"
+            aria-label="Scroll left"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+          </button>
+          
+          <button
+            onClick={() => document.querySelector('.thumbnail-scroll')?.scrollBy({left: 200, behavior: 'smooth'})}
+            className="absolute right-1 top-1/2 -translate-y-1/2 z-30 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white p-1.5 rounded-full shadow-lg transition-all duration-300 md:hidden transform hover:scale-110"
+            aria-label="Scroll right"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+            </svg>
+          </button>
+
+          {/* Thumbnail scroll container */}
+          <div className="thumbnail-scroll flex md:justify-center md:overflow-visible overflow-x-auto scrollbar-hide px-4 md:px-4 py-3 md:py-4 snap-x snap-mandatory md:snap-none">
+            {slides.map((slide, index) => (
+              <button
+                key={slide.id}
+                onClick={() => {
+                  setSlideDirection(index > currentSlide ? 'next' : 'prev');
+                  setCurrentSlide(index);
+                }}
+                className={`group flex-shrink-0 min-w-[120px] md:min-w-[180px] md:flex-1 mx-1 md:mx-0 p-1.5 md:p-4 text-center transition-all duration-500 md:transition-colors md:duration-300 relative overflow-hidden snap-center md:snap-align-none ${
+                  currentSlide === index 
+                    ? 'bg-gradient-to-br from-cyan-50 to-cyan-100 shadow-lg transform scale-105 md:transform-none md:scale-100 z-10' 
+                    : 'bg-gradient-to-br from-blue-50 to-blue-100 hover:bg-gradient-to-br hover:from-blue-100 hover:to-blue-200 shadow-md transform hover:scale-102 md:transform-none md:hover:scale-100 z-0'
+                }`}
+                aria-label={slide.subtitle}
+              >
+
+                
+
+                
+                {/* Title */}
+                <div className={`font-bold text-xs md:text-sm mb-1 md:mb-2 transition-colors duration-300 ${
+                  currentSlide === index ? 'text-gray-900' : 'text-gray-700 group-hover:text-gray-900'
+                }`}>
+                  {slide.subtitle}
+                </div>
+                
+                {/* Description */}
+                <div className={`text-xs leading-tight transition-colors duration-300 break-words ${
+                  currentSlide === index ? 'text-gray-700' : 'text-gray-500 group-hover:text-gray-600'
+                }`}>
+                  {slide.description.split('\n').map((line, idx) => (
+                    <div key={idx}>{line}</div>
+                  ))}
+                </div>
+                
+                {/* Progress indicator for active slide */}
+                {currentSlide === index && isAutoplay && (
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200 rounded-b-xl overflow-hidden">
+                    <div 
+                      className="h-full transition-all duration-100 ease-linear rounded-b-xl"
+                      style={{ 
+                        width: `${progress}%`,
+                        backgroundColor: slide.themeColor
+                      }}
+                    />
+                  </div>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Enhanced Autoplay Control */}
+      <div className="absolute top-6 right-6 z-20">
         <button
           onClick={toggleAutoplay}
-          className={styles.autoplayButton}
+          className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 shadow-lg border border-white/20 hover:scale-110 group"
           aria-label={isAutoplay ? 'Pause autoplay' : 'Play autoplay'}
         >
-          {isAutoplay ? (
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-              <path d="M4 2v12h3V2H4zm5 0v12h3V2H9z" />
-            </svg>
-          ) : (
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-              <path d="M11.58 7.03L5.302 2.165C5.165 2.057 5.016 2 4.857 2 4.384 2 4 2.504 4 3.125v9.75c0 .62.384 1.125.857 1.125.16 0 .308-.057.436-.156L11.58 8.97c.25-.198.42-.558.42-.97 0-.412-.17-.773-.42-.97z" />
-            </svg>
-          )}
-          {isAutoplay && (
-            <div className="absolute inset-0 rounded-lg overflow-hidden">
-              <div 
-                className="absolute bottom-0 left-0 h-1 transition-all duration-100 ease-linear"
-                style={{ 
-                  width: `${progress}%`,
-                  backgroundColor: slides[currentSlide].themeColor || 'rgba(255,255,255,0.5)'
-                }}
-              />
-            </div>
-          )}
+          <div className="relative">
+            {isAutoplay ? (
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" className="transition-transform duration-300 group-hover:scale-110">
+                <path d="M4 2v12h3V2H4zm5 0v12h3V2H9z" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" className="transition-transform duration-300 group-hover:scale-110">
+                <path d="M11.58 7.03L5.302 2.165C5.165 2.057 5.016 2 4.857 2 4.384 2 4 2.504 4 3.125v9.75c0 .62.384 1.125.857 1.125.16 0 .308-.057.436-.156L11.58 8.97c.25-.198.42-.558.42-.97 0-.412-.17-.773-.42-.97z" />
+              </svg>
+            )}
+          </div>
         </button>
       </div>
 
-      {/* Thumbnail Navigation */}
-      <div className={styles.thumbnailNav}>
-        <div className={styles.thumbnailContainer}>
-          {slides.map((slide, index) => (
-            <button
-              key={slide.id}
-              onClick={() => goToSlide(index)}
-              className={`${styles.thumbnail} ${currentSlide === index ? styles.active : ''}`}
-              style={{
-                borderColor: currentSlide === index && slide.themeColor ? slide.themeColor : (slide.themeColor ? `${slide.themeColor}60` : 'rgba(255,255,255,0.2)'),
-                backgroundColor: currentSlide === index && slide.themeColor ? `${slide.themeColor}40` : (slide.themeColor ? `${slide.themeColor}20` : 'rgba(255,255,255,0.05)')
-              }}
-              aria-label={slide.subtitle}
-            >
-              <div className="flex items-center h-full p-3 text-left">
-                <div className="flex-1">
-                  <div className="text-white font-bold text-sm mb-1">
-                    {slide.subtitle}
-                  </div>
-                  <div className="text-white/70 text-xs leading-tight">
-                    {slide.description.length > 40
-                      ? slide.description.substring(0, 40) + '...'
-                      : slide.description}
-                  </div>
-                </div>
-              </div>
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
